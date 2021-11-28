@@ -1,0 +1,146 @@
+.songDetailContainer{
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 底座 */
+.circle{
+  position: relative;
+
+  z-index: 100;
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  background-color: rgb(230, 225, 225);
+  margin: 10rpx 0;
+}
+
+/* 摇杆 */
+.needle{
+  position: relative;
+  left: 60rpx;
+  top: -40rpx;
+
+  z-index: 99;
+  width: 192rpx;
+  height: 274rpx;
+  transform-origin: 40rpx 0;
+  transform: rotateZ(-20deg);
+  transition: transform 0.4s;
+}
+
+/* 摇杆复位 */
+.needleRotate{
+  transform: rotateZ(0);
+}
+
+/* 碟盘 */
+.discContainer{
+  position: relative;
+  top: -170rpx;
+
+  width: 598rpx;
+  height: 598rpx;
+  animation: disc 8s linear infinite paused;
+}
+
+/* 旋转碟盘 */
+.discAnimation{
+  /*animation: disc 4s linear 1s infinite running */
+  animation-play-state:running;
+}
+
+@keyframes disc {
+  from{}
+  to{
+    transform: rotateZ(360deg);
+  }
+}
+
+.discContainer .disc{
+  width: 100%;
+  height: 100%;
+}
+
+.discContainer .musicImg{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  margin: auto;
+  width: 370rpx;
+  height: 370rpx;
+  border-radius: 50%;
+}
+
+/* 进度条区域 */
+.progressControl{
+  position: absolute;
+  bottom: 200rpx;
+
+  width: 640rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+}
+
+.progressControl .barControl{
+  position: relative;
+
+  width: 450rpx;
+  height: 4rpx;
+  background-color: rgba(0, 0, 0, 0.4);
+  margin: auto;   /* 父元素开启flex,子元素margin:auto */ 
+}
+
+/* 实时进度条 */
+.audio-currentTime-Bar{
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 4rpx;
+  background-color: red;
+  z-index: 1;
+}
+
+.audio-circle{
+  position: absolute;
+  right: -12rpx;
+  top: -4rpx;
+
+  width: 12rpx;
+  height: 12rpx;
+  border-radius: 50%;
+  background-color: #fff;
+  z-index: 2;
+}
+
+/* 底部控制播放区域 */
+.musicControl{
+  position: absolute;
+  bottom: 40rpx;
+  left: 0;
+
+  width: 100%;
+  display: flex;
+  border-top: 1rpx solid #fff;
+}
+
+.musicControl text{
+  width: 20%;
+  height: 120rpx;
+  line-height: 120rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 50rpx;
+}
+
+.musicControl text.big{
+  font-size: 80rpx;
+}

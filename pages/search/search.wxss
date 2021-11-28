@@ -1,0 +1,142 @@
+.searchContainer{
+  padding: 0 20rpx;
+}
+
+.header{
+  display: flex;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 10rpx 0;
+}
+
+.header .searchInput{
+  position: relative;
+
+  flex: 1;
+  background-color: rgba(237, 237, 237, 0.3);
+  border-radius: 30rpx;
+}
+
+/*搜索图标 */
+.searchInput .searchIcon{
+  position: absolute;
+  left: 15rpx;
+}
+
+.searchInput input{
+  margin-left: 50rpx;
+  height: 60rpx;
+}
+
+/* 搜索框提示字体的样式 */
+.placeholder{
+  /* color: #d43c33; */
+  font-size: 28rpx;
+}
+
+/* 搜索框中的× */
+.searchInput .clear{
+  position: absolute;
+  right: 30rpx;
+  top:0;
+  
+  font-size: 30rpx;
+  z-index: 10;
+}
+
+.header .cancel{
+  width: 100rpx;
+  text-align: center;
+}
+
+/* 热搜榜 */
+.hotContainer .title{
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1rpx solid #eee;
+  font-size: 28rpx;
+}
+
+.hotList{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hotList .hotItem{
+  width: 50%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 26rpx;
+  display: flex;
+}
+
+.hotItem .order{
+  margin: 0 10rpx;
+}
+
+/* 热搜图片 */
+.hotItem .iconImg{
+  width: 25rpx;
+  height: 20rpx;
+  margin-left: 10rpx;
+}
+
+.iconImg image{
+  width: 100%;
+  height: 100%;
+}
+
+/* 搜索内容展示 */
+.searchContent{
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #d43c33;
+  font-size: 24rpx;
+  border-bottom: 1rpx solid #d43c33;
+}
+
+/* 列表内容 */
+.searchItem{
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+}
+
+.searchItem .content{
+  flex: 1;
+  font-size: 26rpx;
+  margin-left: 20rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+/* 历史记录 */
+.history{
+  position: relative;
+
+  line-height: 50rpx;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20rpx;
+}
+
+.history .title{
+  font-size: 28rpx;
+}
+
+.history .historyItem{
+  font-size: 26rpx;
+  background-color: #ededed;
+  padding: 0 30rpx;
+  margin-left: 20rpx;
+  margin-bottom: 20rpx;
+  border-radius: 20rpx;
+}
+
+/* 清空历史 */
+.history .delete{
+  position: absolute;
+  bottom: 10rpx;
+  right: 5rpx;
+  font-size: 40rpx;
+}
+
