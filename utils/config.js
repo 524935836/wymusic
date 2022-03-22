@@ -1,4 +1,4 @@
 export default{
   host:'http://localhost:3000',
-  mobileHost:'http://32pnu2.natappfree.cc'
+  mobileHost:'http://nedwk3.natappfree.cc'
 }

@@ -11,7 +11,7 @@ export default () => {
         if(res.confirm){  //点击确定跳转
 
           wx.navigateTo({
-            url:'/pages/login/login'
+            url:'/otherPackages/pages/login/login'
           })
         }else{
             wx.navigateBack({  //返回上一页

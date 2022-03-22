@@ -69,7 +69,7 @@ Page({
       // 未登录状态才可以点击
       if(!wx.getStorageSync('userInfo')){
         wx.navigateTo({
-          url:'/pages/login/login'
+          url:'/otherPackages/pages/login/login'
         })
       }
     },

@@ -62,7 +62,7 @@ Page({
     // 跳转至推荐歌曲页面
     toRecommendSong(){
       wx.navigateTo({
-        url:'/pages/recommendSong/recommendSong',
+        url:'/songePackages/pages/recommendSong/recommendSong',
         success:() => {
           app.globalData.pageName = 'recommendSong'
         }

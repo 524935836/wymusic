@@ -1,12 +1,24 @@
 {
     "pages": [
         "pages/index/index",
-        "pages/login/login",
-        "pages/songdetail/songdetail",
-        "pages/search/search",
-        "pages/recommendSong/recommendSong",
         "pages/video/video",
         "pages/personal/personal"
+    ],
+    "subpackages": [
+      {
+        "root": "songePackages",
+        "pages": [
+          "pages/songdetail/songdetail",
+          "pages/recommendSong/recommendSong"
+        ]
+      },
+      {
+        "root": "otherPackages",
+        "pages": [
+          "pages/login/login",
+          "pages/search/search"
+        ]
+      }
     ],
     "style": "v2",
     "sitemapLocation": "sitemap.json",

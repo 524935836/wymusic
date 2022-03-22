@@ -15,7 +15,7 @@
     enable-flex
     scroll-with-animation
     scroll-into-view="{{'scroll' + navId}}"
-  >   <!-- 下方标记另一个以字母开头的id -->
+  >   <!-- 滑动过渡效果的id必须为字母开头 -->
     <view id="{{'scroll' + item.id}}" class="navItem" wx:for="{{videoGroupList}}" wx:key="id">
       <view class="navContent {{item.id === navId?'active':''}}" bind:tap="changNav" id="{{item.id}}">
         {{item.name}}
@@ -37,7 +37,6 @@
       <!-- 视频 -->
       <video 
         src="{{item.data.urlInfo.url}}" 
-        bindplay="handlePlay" 
         id="{{item.data.vid}}"
         poster="{{item.data.coverUrl}}"
         class="common"
@@ -45,6 +44,7 @@
         wx:if="{{videoId === item.data.vid}}"
         bindtimeupdate="handleTimeUpdate"
         bindended="handleEnded"
+        bindloadedmetadata="handleloadedmetadata"
       ></video>
       <!-- 性能优化,使用image代替video -->
       <image src="{{item.data.coverUrl}}" class="common" bind:tap="handlePlay" id="{{item.data.vid}}" wx:else/>

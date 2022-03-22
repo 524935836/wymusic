@@ -80,7 +80,10 @@ Page({
         videoId:vid
       })
       this.videoContext = wx.createVideoContext(vid)
+    },
 
+    // 视频元数据加载完成时触发
+    handleloadedmetadata(event) {
       // 判断数组中是否有当前视频的播放记录
       let {videoUpdateTime} = this.data
       let videoItem = videoUpdateTime.find(item => item.vid === event.currentTarget.id)
@@ -149,7 +152,7 @@ Page({
 
     toSearch(){
       wx.navigateTo({
-        url:'/pages/search/search'
+        url:'/otherPackages/pages/search/search'
       })
 
     },
